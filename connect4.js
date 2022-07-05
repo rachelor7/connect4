@@ -42,5 +42,15 @@ const setPiece = (e) => {
 
   board[r][c] = currPlayer;
 
+  // current tile clicked
   tile = e.target;
+
+  // change color in that tile
+  if (currPlayer === playerRed) {
+    tile.classList.add("red-piece");
+    currPlayer = playerYellow;
+  } else {
+    tile.classList.add("yellow-piece");
+    currPlayer = playerRed;
+  }
 };
